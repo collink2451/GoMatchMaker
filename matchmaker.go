@@ -43,7 +43,7 @@ func get_user_input(prompt string) int {
 func main() {
 
 	fmt.Println("******************************************************")
-	fmt.Println("Matchmaker 3.0")
+	fmt.Println("                    Matchmaker 3.0                    ")
 	fmt.Println("******************************************************")
 
 	fmt.Println("This program figures out if you and I are meant to be.")
@@ -71,10 +71,10 @@ func main() {
 
 	if calculated_percentage == 100 {
 		fmt.Println("You are a perfect match!")
-	} else if calculated_percentage > 90 {
+	} else if calculated_percentage > 80 {
 		fmt.Println("You are a great match!")
-	} else if calculated_percentage > 70 {
-		fmt.Println("You are an ok match!")
+	} else if calculated_percentage > 60 {
+		fmt.Println("Maybe we should just be friends.")
 	} else {
 		fmt.Println("You are a terrible match! Get out!")
 	}
