@@ -58,7 +58,7 @@ func main() {
 		fmt.Print("Question ")
 		fmt.Print(i + 1)
 		fmt.Println(":")
-		fmt.Println("----------")
+		fmt.Println("-----------")
 		user_answers[i] = get_user_input(questions[i] + ": ")
 		total_score += calculate_score(answers[i], user_answers[i])
 		fmt.Println()
