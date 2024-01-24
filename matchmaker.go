@@ -16,6 +16,7 @@ var questions = []string{
 
 var answers = []int{1, 2, 3, 4, 5}
 var user_answers = []int{0, 0, 0, 0, 0}
+var question_scores = []int{0, 0, 0, 0, 0}
 
 var max_score = 4 * len(questions)
 
@@ -60,7 +61,8 @@ func main() {
 		fmt.Println(":")
 		fmt.Println("-----------")
 		user_answers[i] = get_user_input(questions[i] + ": ")
-		total_score += calculate_score(answers[i], user_answers[i])
+		question_scores[i] = calculate_score(answers[i], user_answers[i])
+		total_score += question_scores[i]
 		fmt.Println()
 	}
 
@@ -77,5 +79,22 @@ func main() {
 		fmt.Println("Maybe we should just be friends.")
 	} else {
 		fmt.Println("You are a terrible match! Get out!")
+	}
+
+	fmt.Println()
+
+	fmt.Println("Overview")
+	fmt.Println("--------")
+	for i := 0; i < len(questions); i++ {
+		fmt.Print(questions[i])
+		fmt.Println(": ")
+		fmt.Print("You answered ")
+		fmt.Print(user_answers[i])
+		fmt.Print(" and my answer is ")
+		fmt.Println(answers[i])
+		fmt.Print("Your compatibility score for this question is ")
+		fmt.Print(float64(question_scores[i]) / 4.0 * 100)
+		fmt.Println("%")
+		fmt.Println()
 	}
 }
