@@ -1,3 +1,3 @@
-module matchmaker
+module Matchmaker
 
 go 1.21.6

@@ -14,7 +14,7 @@ var questions = []string{
 	"This is Question 5",
 }
 
-var answers = []int{1, 2, 3, 4, 5}
+var my_answers = []int{1, 2, 3, 4, 5}
 var user_answers = []int{0, 0, 0, 0, 0}
 var question_scores = []int{0, 0, 0, 0, 0}
 
@@ -61,7 +61,7 @@ func main() {
 		fmt.Println(":")
 		fmt.Println("-----------")
 		user_answers[i] = get_user_input(questions[i] + ": ")
-		question_scores[i] = calculate_score(answers[i], user_answers[i])
+		question_scores[i] = calculate_score(my_answers[i], user_answers[i])
 		total_score += question_scores[i]
 		fmt.Println()
 	}
@@ -91,7 +91,7 @@ func main() {
 		fmt.Print("You answered ")
 		fmt.Print(user_answers[i])
 		fmt.Print(" and my answer is ")
-		fmt.Println(answers[i])
+		fmt.Println(my_answers[i])
 		fmt.Print("Your compatibility score for this question is ")
 		fmt.Print(float64(question_scores[i]) / 4.0 * 100)
 		fmt.Println("%")
