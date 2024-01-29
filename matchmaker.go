@@ -5,16 +5,15 @@ import (
 	"math"
 )
 
-// create array of questions that also includes a number for the correct answer
 var questions = []string{
-	"This is Question 1",
-	"This is Question 2",
-	"This is Question 3",
-	"This is Question 4",
-	"This is Question 5",
+	"What is your favorite number between 1 and 5",
+	"C# is the best all around programming language",
+	"The Blackhawks are going to make a come back next season",
+	"Python is an amazing programming language",
+	"The Cheifs are going to win the Super Bowl this year",
 }
 
-var my_answers = []int{1, 2, 3, 4, 5}
+var my_answers = []int{4, 5, 5, 1, 3}
 var user_answers = []int{0, 0, 0, 0, 0}
 var question_scores = []int{0, 0, 0, 0, 0}
 
